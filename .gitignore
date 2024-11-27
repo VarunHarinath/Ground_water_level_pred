@@ -4,5 +4,4 @@ __pycache__
 *.pkl
 *.log
 env
-Dockerfile
 docker-compose.yml  
