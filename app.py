@@ -42,4 +42,6 @@ async def home(request:request_response_model,x_api_key:str=Depends(verify_api_k
     response = response_model(rain_fall_predtiction=prediction[0])
     return JSONResponse(content=response.dict(),status_code=200,headers={"x-api-key":x_api_key})
 
-
+@app.get('/')
+async def root():
+    return {"message":"Welcome to Ground Water Prediction API"}
